@@ -1,0 +1,19 @@
+# Render Blueprint for the meet repo.
+# The static frontend is served by GitHub Pages; this defines the API service.
+services:
+  - type: web
+    name: meet-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
+    healthCheckPath: /
+    envVars:
+      - key: MONGODB_URI
+        sync: false # paste your MongoDB Atlas connection string in the dashboard
+      - key: MONGODB_DB
+        value: meet
+      - key: FRONTEND_URL
+        value: https://tobias-fletch.github.io/meet
+      - key: ADMIN_KEY
+        generateValue: true # use for the x-admin-key header on /api/events
