@@ -1,0 +1,1 @@
+{"dependencies":{"cors":"^2.8.5","dotenv":"^16.4.5","express":"^4.19.2","mongoose":"^8.4.0"},"description":"Self-hosted events API for the Meet app — no Google dependency","license":"ISC","main":"index.js","name":"meet-api","scripts":{"start":"node index.js"},"version":"1.0.0"}
